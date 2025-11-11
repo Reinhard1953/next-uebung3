@@ -31,6 +31,9 @@
     "@types/react-dom": "19.0.3",
     "prisma": "^6.19.0"
   },
+
+  "packageManager": "pnpm@10.21.0",
+
   "pnpm": {
     "onlyBuiltDependencies": [
       "@prisma/client",
