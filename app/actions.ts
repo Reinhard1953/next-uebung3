@@ -5,11 +5,10 @@ export async function getData() {
   const dbUrl = process.env.DATABASE_URL;
 
   if (!dbUrl) {
-    throw new Error("DATABASE_URL is not defined");
+    throw new Error("❌ DATABASE_URL is not defined");
   }
 
-  //const sql = neon(dbUrl); // ✅ dbUrl ist jetzt sicher ein string
-  const sql = neon(process.env.DATABASE_URL!);
+  const sql = neon(dbUrl);
   const data = await sql`SELECT * FROM your_table`;
   return data;
 }
